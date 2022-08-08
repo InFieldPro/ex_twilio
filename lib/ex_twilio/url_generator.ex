@@ -72,6 +72,10 @@ defmodule ExTwilio.UrlGenerator do
           url = add_segments(Config.programmable_messaging_url(), module, id, options)
           {url, options}
 
+        ["ExTwilio", "TrustHub" | _ ] ->
+          url = add_segments(Config.trust_hub_url(), module, id, options)
+          {url, options}
+
         _ ->
           # Add Account SID segment if not already present
           options = add_account_to_options(module, options)
@@ -133,7 +137,7 @@ defmodule ExTwilio.UrlGenerator do
   @spec resource_name(atom | String.t()) :: String.t()
   def resource_name(module) do
     name = to_string(module)
-    [[name]] = Regex.scan(~r/[a-z]+$/i, name)
+    [[name]] = Regex.scan(~r/[a-z0-9]+$/i, name)
     Inflex.pluralize(name)
   end
 
