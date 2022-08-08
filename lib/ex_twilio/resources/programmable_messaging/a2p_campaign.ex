@@ -1,4 +1,9 @@
 defmodule ExTwilio.ProgrammableMessaging.A2PCampaign do
+  @moduledoc """
+  Represents an US A2P Campaign resource in the Twilio Programmable Messaging API.
+
+  - [Twilio docs](https://www.twilio.com/docs/messaging/services/api/us-a2p-campaign-resource)
+  """
     defstruct sid: nil,
         account_sid: nil,
         brand_registration_sid: nil,
