@@ -69,6 +69,10 @@ defmodule ExTwilio.Config do
 
   def video_url, do: "https://video.twilio.com/v1"
 
+  def programmable_messaging_url, do: "https://messaging.twilio.com/v1"
+
+  def trust_hub_url, do: "https://trusthub.twilio.com/v1/"
+
   @doc """
   A light wrapper around `Application.get_env/2`, providing automatic support for
   `{:system, "VAR"}` tuples.
