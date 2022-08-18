@@ -14,6 +14,9 @@ defmodule ExTwilio.TrustHub.SupportingDocument do
     import: [
       :stream,
       :all,
-      :find
+      :find,
+      :create,
+      :destroy,
+      :update
     ]
 end
