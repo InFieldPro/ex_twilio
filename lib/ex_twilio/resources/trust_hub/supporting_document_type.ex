@@ -9,8 +9,6 @@ defmodule ExTwilio.TrustHub.SupportingDocumentType do
     import: [
       :stream,
       :all,
-      :find,
-      :create,
-      :destroy
+      :find
     ]
 end
