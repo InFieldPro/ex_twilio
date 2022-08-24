@@ -18,6 +18,7 @@ defmodule ExTwilio.TrustHub.CustomerProfile do
         :all,
         :find,
         :create,
-        :destroy
+        :destroy,
+        :update
       ]
 end

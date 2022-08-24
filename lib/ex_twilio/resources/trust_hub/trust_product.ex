@@ -18,6 +18,7 @@ defmodule ExTwilio.TrustHub.TrustProduct do
         :all,
         :find,
         :create,
-        :destroy
+        :destroy,
+        :update
       ]
 end
