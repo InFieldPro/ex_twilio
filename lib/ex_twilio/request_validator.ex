@@ -32,7 +32,7 @@ defmodule ExTwilio.RequestValidator do
     |> Enum.join()
   end
 
-  defp compute_hmac(data, key), do: hmac(:sha, key, data)
+  defp compute_hmac(data, key), do: hmac(:sha256, key, data)
 
   # TODO: remove when we require OTP 22
   if System.otp_release() >= "22" do
