@@ -155,8 +155,6 @@ defmodule ExTwilio.Config do
 
   def trust_hub_url, do: "https://trusthub.twilio.com/v1"
 
-  defp from_env(key, default \\ nil)
-
   defp studio_url(opts),
     do: opts[:studio] || build_url(opts[:domain], "studio", "v1") || Env.studio_url()
 
