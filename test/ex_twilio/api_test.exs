@@ -95,7 +95,7 @@ defmodule ExTwilio.ApiTest do
     headers = Api.process_request_headers([])
     content = {:"Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"}
     assert content in headers
-    assert Keyword.keys(headers) == [:Authorization, :"Content-Type"]
+    assert Keyword.keys(headers) == [:"Content-Type"]
   end
 
   test ".process_request_options adds configured options if configured" do
