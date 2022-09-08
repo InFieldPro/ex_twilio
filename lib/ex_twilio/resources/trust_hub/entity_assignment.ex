@@ -1,6 +1,7 @@
 defmodule ExTwilio.TrustHub.EntityAssignment do
   defstruct sid: nil,
     customer_profile_sid: nil,
+    trust_product_sid: nil,
     account_sid: nil,
     object_sid: nil,
     date_created: nil,

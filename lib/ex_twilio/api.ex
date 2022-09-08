@@ -146,9 +146,9 @@ defmodule ExTwilio.Api do
   """
   @spec auth_header(options :: list) :: list
   def auth_header(options \\ []) do
-    config = options[:config] || options["config"] || Config.new()
-    account = options[:account] || options["account"] || config.account
-    token = options[:token] || options["token"] || config.token
+    config = Keyword.get(options, :config, Config.new())
+    account = Keyword.get(options, :account, config.account)
+    token = Keyword.get(options, :token, config.token)
 
     auth_header([], {account, token})
   end
