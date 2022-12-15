@@ -35,6 +35,29 @@ defmodule ExTwilio.Message do
             subresource_uri: nil,
             messaging_service_sid: nil
 
+  @type t :: %__MODULE__{
+          sid: String.t(),
+          date_created: String.t(),
+          date_updated: String.t(),
+          date_sent: String.t(),
+          account_sid: String.t(),
+          from: String.t(),
+          to: String.t(),
+          body: String.t(),
+          num_media: String.t(),
+          num_segments: String.t(),
+          status: String.t(),
+          error_code: String.t(),
+          error_message: String.t(),
+          direction: String.t(),
+          price: String.t(),
+          price_unit: String.t(),
+          api_version: String.t(),
+          uri: String.t(),
+          subresource_uri: String.t(),
+          messaging_service_sid: String.t()
+        }
+
   use ExTwilio.Resource,
     import: [
       :stream,
