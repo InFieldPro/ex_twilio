@@ -35,7 +35,7 @@ defmodule ExTwilio.Message do
             subresource_uri: nil,
             messaging_service_sid: nil
 
-  @type t() :: %__MODULE__{
+  @type t :: %__MODULE__{
           sid: String.t(),
           date_created: String.t(),
           date_updated: String.t(),
