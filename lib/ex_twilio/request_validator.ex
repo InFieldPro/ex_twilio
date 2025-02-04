@@ -5,7 +5,7 @@ defmodule ExTwilio.RequestValidator do
   - [Twilio docs](https://www.twilio.com/docs/usage/security)
   """
 
-  use Bitwise
+  import Bitwise
 
   def valid?(url, params, signature, auth_token) do
     url
